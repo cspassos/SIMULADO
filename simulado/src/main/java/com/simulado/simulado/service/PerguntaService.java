@@ -65,4 +65,33 @@ public class PerguntaService {
 		
 		return perguntaRespostas;
 	}
+//	
+//	public static void main(String[] args) {
+//        Set<Integer> lista = new HashSet<>();
+//        lista.add(8);
+//        lista.add(17);
+//
+//        System.out.println(lista.add(8));
+//        System.out.println(lista.add(10));
+//
+//        while(adicionarNumeroRandomico(lista).size() < 30){
+//            System.out.println("Gerando os 30 numeros");
+//        }
+//
+//        System.out.println(lista);
+//    }
+//
+//    private static List<Integer> adicionarNumeroRandomico(Set<Integer> lista) {
+//        do {
+//            System.out.println("Ainda não gerou do-while");
+//        } while(lista.add(gerarRandomico()));
+//        return lista.stream().collect(Collectors.toList());
+//    }
+//
+//    private static int gerarRandomico() {
+//        Random rand = new Random();
+//        int randomNum = rand.nextInt((30 - 1) + 1) + 1;
+//
+//        return randomNum;
+//    }
 }
