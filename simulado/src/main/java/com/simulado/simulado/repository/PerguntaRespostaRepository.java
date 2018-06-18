@@ -11,7 +11,7 @@ import com.simulado.simulado.DTO.PerguntaDTO;
 import com.simulado.simulado.model.Pergunta;
 
 @Repository
-public interface PerguntaRespostaRepository  extends JpaRepository<Pergunta, Long>{
+public interface PerguntaRespostaRepository  extends JpaRepository<Pergunta, Long>, PerguntaRespostaRepositoryCustom{
 
 	@Query("SELECT new com.simulado.simulado.DTO.PerguntaDTO(pergunta.pergunta, resposta.resposta)"
 			+ " FROM Pergunta pergunta"
@@ -19,5 +19,4 @@ public interface PerguntaRespostaRepository  extends JpaRepository<Pergunta, Lon
 			+ " WHERE pergunta.idPergunta = :idPergunta")
 	List<PerguntaDTO> buscarPerguntaResposta(@Param("idPergunta") Long idPergunta);
 
-	
 }
